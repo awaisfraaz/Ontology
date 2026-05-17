@@ -1,0 +1,1952 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sio="http://semanticscience.org/ontology/sio.owl/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gsso="http://purl.obolibrary.org/obo/gsso.owl/"
+     xmlns:mesh="https://w3id.org/biopragmatics/resources/mesh/mesh.ofn/"
+     xmlns:ncit="http://purl.obolibrary.org/obo/ncit.owl/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:omrse="http://purl.obolibrary.org/obo/omrse.owl/"
+     xmlns:schema="https://schema.org/"
+     xmlns:schema1="http://schema.org/"
+     xmlns:reproduceme="https://w3id.org/reproduceme/"
+     xmlns:untitled-ontology-52="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#">
+    <Ontology rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/affiliation -->
+
+    <ObjectProperty rdf:about="http://schema.org/affiliation">
+        <rdfs:domain rdf:resource="http://schema.org/Researcher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ResearchLab"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/employee -->
+
+    <ObjectProperty rdf:about="http://schema.org/employee">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://id.nlm.nih.gov/mesh/D005178"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AdministrativeStaff"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/CollegeOrUniversity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/funder -->
+
+    <ObjectProperty rdf:about="http://schema.org/funder">
+        <rdfs:domain rdf:resource="http://schema.org/CollegeOrUniversity"/>
+        <rdfs:range rdf:resource="http://schema.org/Grant"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/funding -->
+
+    <ObjectProperty rdf:about="http://schema.org/funding">
+        <rdfs:domain rdf:resource="https://w3id.org/reproduceme#ResearchProject"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ResearchGrant"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/hasCourse -->
+
+    <ObjectProperty rdf:about="http://schema.org/hasCourse">
+        <rdfs:domain rdf:resource="http://schema.org/EducationalOccupationalCredential"/>
+        <rdfs:range rdf:resource="http://schema.org/Course"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/hasCredential -->
+
+    <ObjectProperty rdf:about="http://schema.org/hasCredential">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+        <rdfs:range rdf:resource="http://schema.org/EducationalOccupationalCredential"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/isPartOf -->
+
+    <ObjectProperty rdf:about="http://schema.org/isPartOf">
+        <rdfs:domain rdf:resource="http://schema.org/Course"/>
+        <rdfs:range rdf:resource="http://schema.org/EducationalOccupationalCredential"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/isPrerequisiteOf -->
+
+    <ObjectProperty rdf:about="http://schema.org/isPrerequisiteOf">
+        <rdfs:domain rdf:resource="http://schema.org/Course"/>
+        <rdfs:range rdf:resource="http://schema.org/Course"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/memberOf -->
+
+    <ObjectProperty rdf:about="http://schema.org/memberOf">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/organizedBy -->
+
+    <ObjectProperty rdf:about="http://schema.org/organizedBy">
+        <rdfs:domain rdf:resource="http://schema.org/Event"/>
+        <rdfs:range rdf:resource="http://schema.org/CollegeOrUniversity"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/organizer -->
+
+    <ObjectProperty rdf:about="http://schema.org/organizer">
+        <rdfs:domain rdf:resource="http://schema.org/CollegeOrUniversity"/>
+        <rdfs:range rdf:resource="http://schema.org/Event"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/taughtBy -->
+
+    <ObjectProperty rdf:about="http://schema.org/taughtBy">
+        <inverseOf rdf:resource="http://schema.org/teaches"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+        <rdfs:range rdf:resource="http://id.nlm.nih.gov/mesh/D005178"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://schema.org/teaches -->
+
+    <ObjectProperty rdf:about="http://schema.org/teaches">
+        <rdfs:domain rdf:resource="http://id.nlm.nih.gov/mesh/D005178"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#awardedTo -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#awardedTo">
+        <inverseOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#receives"/>
+        <rdfs:domain rdf:resource="http://schema.org/Grant"/>
+        <rdfs:range>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+                    <rdf:Description rdf:about="http://schema.org/Researcher"/>
+                </unionOf>
+            </Class>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#completedBy -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#completedBy">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C131902"/>
+                    <rdf:Description rdf:about="http://schema.org/EducationalOccupationalCredential"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#completesExamination -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#completesExamination">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C131902"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#enrolledIn -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#enrolledIn">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+        <rdfs:range rdf:resource="http://schema.org/Course"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#hasAcademicRecord -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#hasAcademicRecord">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicRecord"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#hasEnrolled -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#hasEnrolled">
+        <rdfs:domain rdf:resource="http://schema.org/Course"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#hasMajorIn -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#hasMajorIn">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Specialization"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#hasRecord -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#hasRecord">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Records"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#hosts -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#hosts">
+        <rdfs:domain rdf:resource="http://schema.org/CollegeOrUniversity"/>
+        <rdfs:range rdf:resource="http://schema.org/Project"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#managedBy -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#managedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicUnit"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AdministrativeStaff"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#receives -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#receives">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+                    <rdf:Description rdf:about="http://schema.org/Researcher"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Grant"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#submittedTo -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#submittedTo">
+        <rdfs:domain rdf:resource="http://schema.org/Thesis"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C42671"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#supervises -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#supervises">
+        <rdfs:domain rdf:resource="http://id.nlm.nih.gov/mesh/D005178"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#worksOnProject -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#worksOnProject">
+        <rdfs:domain rdf:resource="http://schema.org/Researcher"/>
+        <rdfs:range rdf:resource="https://w3id.org/reproduceme#ResearchProject"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/address -->
+
+    <DatatypeProperty rdf:about="http://schema.org/address">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                    <rdf:Description rdf:about="http://schema.org/Place"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/amount -->
+
+    <DatatypeProperty rdf:about="http://schema.org/amount">
+        <rdfs:domain rdf:resource="http://schema.org/Grant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/birthDate -->
+
+    <DatatypeProperty rdf:about="http://schema.org/birthDate">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/competencyRequired -->
+
+    <DatatypeProperty rdf:about="http://schema.org/competencyRequired">
+        <rdfs:domain rdf:resource="http://schema.org/EducationalOccupationalCredential"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/courseCode -->
+
+    <DatatypeProperty rdf:about="http://schema.org/courseCode">
+        <rdfs:domain rdf:resource="http://schema.org/Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/datePublished -->
+
+    <DatatypeProperty rdf:about="http://schema.org/datePublished">
+        <rdfs:domain rdf:resource="http://schema.org/Thesis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/description -->
+
+    <DatatypeProperty rdf:about="http://schema.org/description">
+        <rdfs:domain rdf:resource="http://schema.org/Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/email -->
+
+    <DatatypeProperty rdf:about="http://schema.org/email">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/CollegeOrUniversity"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/endDate -->
+
+    <DatatypeProperty rdf:about="http://schema.org/endDate">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                    <rdf:Description rdf:about="https://w3id.org/reproduceme#ResearchProject"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/gender -->
+
+    <DatatypeProperty rdf:about="http://schema.org/gender">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/givenName -->
+
+    <DatatypeProperty rdf:about="http://schema.org/givenName">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/inLanguage -->
+
+    <DatatypeProperty rdf:about="http://schema.org/inLanguage">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Course"/>
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                    <rdf:Description rdf:about="http://schema.org/Thesis"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/maximumAttendeeCapacity -->
+
+    <DatatypeProperty rdf:about="http://schema.org/maximumAttendeeCapacity">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                    <rdf:Description rdf:about="http://schema.org/Place"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/name -->
+
+    <DatatypeProperty rdf:about="http://schema.org/name">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Course"/>
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                    <rdf:Description rdf:about="http://schema.org/Thesis"/>
+                    <rdf:Description rdf:about="https://w3id.org/reproduceme#ResearchProject"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/numberOfCredits -->
+
+    <DatatypeProperty rdf:about="http://schema.org/numberOfCredits">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Course"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DegreeProgram"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/startDate -->
+
+    <DatatypeProperty rdf:about="http://schema.org/startDate">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                    <rdf:Description rdf:about="https://w3id.org/reproduceme#ResearchProject"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/telephone -->
+
+    <DatatypeProperty rdf:about="http://schema.org/telephone">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#cgpa -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#cgpa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#gpa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#curriculumVersion -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#curriculumVersion">
+        <rdfs:domain rdf:resource="http://id.nlm.nih.gov/mesh/D003479"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#employeeId -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#employeeId">
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://id.nlm.nih.gov/mesh/D005178"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AdministrativeStaff"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#examDuration -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#examDuration">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C131902"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#gpa -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#gpa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#gpa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#issueDate -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#issueDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#TranscriptRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#studentId -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#studentId">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://id.nlm.nih.gov/mesh/D003479 -->
+
+    <Class rdf:about="http://id.nlm.nih.gov/mesh/D003479">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Records"/>
+        <rdfs:label>Curriculum</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://id.nlm.nih.gov/mesh/D005178 -->
+
+    <Class rdf:about="http://id.nlm.nih.gov/mesh/D005178">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>FacultyMember</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://id.nlm.nih.gov/mesh/D005257 -->
+
+    <Class rdf:about="http://id.nlm.nih.gov/mesh/D005257">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Grant"/>
+        <rdfs:label>ScholarShip</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://id.nlm.nih.gov/mesh/D059232 -->
+
+    <Class rdf:about="http://id.nlm.nih.gov/mesh/D059232">
+        <rdfs:subClassOf rdf:resource="http://id.nlm.nih.gov/mesh/D005178"/>
+        <rdfs:label>LabAssistant</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GSSO_010256 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/GSSO_010256">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+        <rdfs:label>UndergraduateStudent</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GSSO_010257 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/GSSO_010257">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75561"/>
+        <rdfs:label>PostgraduateStudent</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C131902 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C131902">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#EducationEvent"/>
+        <rdfs:label>Examination</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C25357 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25357">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AdministrativeStaff"/>
+        <rdfs:label>Registrar</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C37984 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C37984">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicUnit"/>
+        <rdfs:label>Laboratory</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C39327 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C39327">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DegreeProgram"/>
+        <rdfs:label>BachelorDegree</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C39453 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C39453">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DegreeProgram"/>
+        <rdfs:label>MasterDegree</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C42671 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C42671">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicUnit"/>
+        <rdfs:label>Department</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C61514 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C61514">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicUnit"/>
+        <rdfs:label>College</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C69170 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C69170">
+        <rdfs:subClassOf rdf:resource="http://id.nlm.nih.gov/mesh/D005178"/>
+        <rdfs:label>Professor</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C71335 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C71335">
+        <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOccupationalCredential"/>
+        <rdfs:label>Diploma</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C75552 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C75552">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AdministrativeStaff"/>
+        <rdfs:label>Clerk</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C75561 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C75561">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AdministrativeStaff"/>
+        <rdfs:label>Student</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/CollegeOrUniversity -->
+
+    <Class rdf:about="http://schema.org/CollegeOrUniversity">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+        <rdfs:label>College Or University</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/ConferenceEvent -->
+
+    <Class rdf:about="http://schema.org/ConferenceEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicEvent"/>
+        <rdfs:label>Conference Event</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Course -->
+
+    <Class rdf:about="http://schema.org/Course">
+        <rdfs:label>Course</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/EducationalOccupationalCredential -->
+
+    <Class rdf:about="http://schema.org/EducationalOccupationalCredential">
+        <rdfs:label>Educational Occupational Credential</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Event -->
+
+    <Class rdf:about="http://schema.org/Event">
+        <rdfs:label>Event</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Grant -->
+
+    <Class rdf:about="http://schema.org/Grant">
+        <rdfs:label>Grant</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Organization -->
+
+    <Class rdf:about="http://schema.org/Organization">
+        <rdfs:label>Organization</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <Class rdf:about="http://schema.org/Person">
+        <rdfs:label>Person</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+    <Class rdf:about="http://schema.org/Place">
+        <rdfs:label>Place</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Project -->
+
+    <Class rdf:about="http://schema.org/Project">
+        <rdfs:label>Project</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Researcher -->
+
+    <Class rdf:about="http://schema.org/Researcher">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>Researcher</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://schema.org/Thesis -->
+
+    <Class rdf:about="http://schema.org/Thesis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Records"/>
+        <rdfs:label>Thesis</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000875 -->
+
+    <Class rdf:about="http://semanticscience.org/resource/SIO_000875">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AdministrativeStaff"/>
+        <rdfs:label>HOD</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicEvent -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicEvent">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+        <rdfs:label>Academic Event</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicRecord -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Records"/>
+        <rdfs:label>Academic Record</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicRewards -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicRewards">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Grant"/>
+        <rdfs:label>Academic Rewards</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicUnit -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicUnit">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CollegeOrUniversity"/>
+        <rdfs:label>Academic Unit</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AdministrativeStaff -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AdministrativeStaff">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>Administrative Staff</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ArtificialIntelligenceSpecialization -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ArtificialIntelligenceSpecialization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Specialization"/>
+        <disjointWith>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CyberSecuritySpecialization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DataScienceSpecialization"/>
+                </unionOf>
+            </Class>
+        </disjointWith>
+        <rdfs:label>Artificial Intelligence Specialization</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AssistantProfessor -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AssistantProfessor">
+        <rdfs:subClassOf rdf:resource="http://id.nlm.nih.gov/mesh/D005178"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Lecturer"/>
+        <rdfs:label>Assistant Professor</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Building -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Building">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+        <rdfs:label>Building</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CertificateProgram -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CertificateProgram">
+        <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOccupationalCredential"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DegreeProgram"/>
+        <rdfs:label>Certificate Program</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Classroom -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Classroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Building"/>
+        <rdfs:label>Classroom</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CoreCourses -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CoreCourses">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Course"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ElectiveCourses"/>
+        <rdfs:label>Core Courses</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CyberSecuritySpecialization -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CyberSecuritySpecialization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Specialization"/>
+        <disjointWith>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ArtificialIntelligenceSpecialization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DataScienceSpecialization"/>
+                </unionOf>
+            </Class>
+        </disjointWith>
+        <rdfs:label>Cyber Security Specialization</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DataScienceSpecialization -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DataScienceSpecialization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Specialization"/>
+        <disjointWith>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ArtificialIntelligenceSpecialization"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CyberSecuritySpecialization"/>
+                </unionOf>
+            </Class>
+        </disjointWith>
+        <rdfs:label>Data Science Specialization</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Dean -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Dean">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AdministrativeStaff"/>
+        <rdfs:label>Dean</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DegreeProgram -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DegreeProgram">
+        <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOccupationalCredential"/>
+        <rdfs:label>Degree Program</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DoctrateDegree -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DoctrateDegree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DegreeProgram"/>
+        <rdfs:label>Doctorate Degree</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#EducationEvent -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#EducationEvent">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+        <rdfs:label>Education Event</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ElectiveCourses -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ElectiveCourses">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Course"/>
+        <rdfs:label>Elective Courses</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Final -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Final">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C131902"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Mids"/>
+        <rdfs:label>Final Examination</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#IOTLab -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#IOTLab">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C37984"/>
+        <rdfs:label>IOT Lab</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#InternationalConference -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#InternationalConference">
+        <rdfs:subClassOf rdf:resource="http://schema.org/ConferenceEvent"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NationalConference"/>
+        <rdfs:label>International Conference</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Lecture -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Lecture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#EducationEvent"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Workshop"/>
+        <rdfs:label>Lecture</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Lecturer -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://id.nlm.nih.gov/mesh/D005178"/>
+        <rdfs:label>Lecturer</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Library -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Library">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Building"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ResearchLab"/>
+        <rdfs:label>Library</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MasterStudent -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MasterStudent">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GSSO_010257"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHDStudent"/>
+        <rdfs:label>Master Student</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MasterThesis -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MasterThesis">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Thesis"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHDThesis"/>
+        <rdfs:label>Master Thesis</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MeritBaseScholarship -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MeritBaseScholarship">
+        <rdfs:subClassOf rdf:resource="http://id.nlm.nih.gov/mesh/D005257"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NeedBaseScholarship"/>
+        <rdfs:label>Merit Based Scholarship</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Mids -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Mids">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C131902"/>
+        <rdfs:label>Midterm Examination</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NationalConference -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NationalConference">
+        <rdfs:subClassOf rdf:resource="http://schema.org/ConferenceEvent"/>
+        <rdfs:label>National Conference</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NeedBaseScholarship -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NeedBaseScholarship">
+        <rdfs:subClassOf rdf:resource="http://id.nlm.nih.gov/mesh/D005257"/>
+        <rdfs:label>Need Based Scholarship</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHDStudent -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHDStudent">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GSSO_010257"/>
+        <rdfs:label>PHD Student</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHDThesis -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHDThesis">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Thesis"/>
+        <rdfs:label>PHD Thesis</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ProfessionalCertificate -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ProfessionalCertificate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CertificateProgram"/>
+        <rdfs:label>Professional Certificate</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Records -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Records">
+        <rdfs:label>Records</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ResearchGrant -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ResearchGrant">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Grant"/>
+        <rdfs:label>Research Grant</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ResearchLab -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ResearchLab">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C37984"/>
+        <rdfs:label>Research Lab</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Specialization -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Specialization">
+        <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOccupationalCredential"/>
+        <rdfs:label>Specialization</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#TranscriptRecord -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#TranscriptRecord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicRecord"/>
+        <rdfs:label>Transcript Record</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Workshop -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Workshop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#EducationEvent"/>
+        <rdfs:label>Workshop</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#gpa -->
+
+    <Class rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#gpa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AcademicRecord"/>
+    </Class>
+    
+
+
+    <!-- https://w3id.org/reproduceme#ResearchProject -->
+
+    <Class rdf:about="https://w3id.org/reproduceme#ResearchProject">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Project"/>
+        <rdfs:label>Research Project</rdfs:label>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AI-S -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AI-S">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ArtificialIntelligenceSpecialization"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AP-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AP-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AssistantProfessor"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <untitled-ontology-52:supervises rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student1"/>
+        <schema1:address>z-block</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>AMIR-ZIA</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AP-2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AP-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AssistantProfessor"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <untitled-ontology-52:supervises rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student3"/>
+        <schema1:address>a-block</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>M.ZAIDI</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#BD-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#BD-1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C39327"/>
+        <untitled-ontology-52:completedBy rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student1"/>
+        <schema1:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-23T00:00:00Z</schema1:endDate>
+        <schema1:givenName>CS</schema1:givenName>
+        <schema1:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-23T00:00:00Z</schema1:startDate>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#C1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#C1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CoreCourses"/>
+        <schema1:isPrerequisiteOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#C2"/>
+        <schema1:courseCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</schema1:courseCode>
+        <schema1:givenName>Database</schema1:givenName>
+        <schema1:inLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</schema1:inLanguage>
+        <schema1:numberOfCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</schema1:numberOfCredits>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#C2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#C2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CoreCourses"/>
+        <schema1:courseCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</schema1:courseCode>
+        <schema1:givenName>OS</schema1:givenName>
+        <schema1:inLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</schema1:inLanguage>
+        <schema1:numberOfCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</schema1:numberOfCredits>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CB-S -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CB-S">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CyberSecuritySpecialization"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CL1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CL1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Classroom"/>
+        <schema1:givenName>MAB 160</schema1:givenName>
+        <schema1:maximumAttendeeCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</schema1:maximumAttendeeCapacity>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CL2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CL2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Classroom"/>
+        <schema1:givenName>MAB 161</schema1:givenName>
+        <schema1:maximumAttendeeCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</schema1:maximumAttendeeCapacity>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DD-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DD-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DoctrateDegree"/>
+        <schema1:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2027-10-23T00:00:00Z</schema1:endDate>
+        <schema1:givenName>DPT</schema1:givenName>
+        <schema1:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-23T00:00:00Z</schema1:startDate>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DS-S -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DS-S">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DataScienceSpecialization"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Dep-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Dep-1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C42671"/>
+        <untitled-ontology-52:managedBy rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#HOD-1"/>
+        <schema1:name>Computer Science</schema1:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#EC-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#EC-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ElectiveCourses"/>
+        <schema1:isPrerequisiteOf rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#C2"/>
+        <schema1:courseCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</schema1:courseCode>
+        <schema1:givenName>Computer Vision</schema1:givenName>
+        <schema1:inLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</schema1:inLanguage>
+        <schema1:numberOfCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</schema1:numberOfCredits>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#F1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#F1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Final"/>
+        <untitled-ontology-52:completedBy rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student1"/>
+        <schema1:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-10-27T00:00:00Z</schema1:endDate>
+        <schema1:givenName>2025 spring</schema1:givenName>
+        <schema1:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-10-23T00:00:00Z</schema1:startDate>
+        <untitled-ontology-52:examDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</untitled-ontology-52:examDuration>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#gpa"/>
+        <untitled-ontology-52:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</untitled-ontology-52:cgpa>
+        <untitled-ontology-52:gpa rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.75</untitled-ontology-52:gpa>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#gpa"/>
+        <untitled-ontology-52:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.1</untitled-ontology-52:cgpa>
+        <untitled-ontology-52:gpa rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.2</untitled-ontology-52:gpa>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#HOD-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#HOD-1">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000875"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:address>murad-colony</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>DR-FAISAL</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#HOD-2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#HOD-2">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000875"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:address>fsd</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>DR-BILAL</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#HOD-3 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#HOD-3">
+        <rdf:type rdf:resource="http://semanticscience.org/resource/SIO_000875"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:address>sgd</schema1:address>
+        <schema1:gender>female</schema1:gender>
+        <schema1:givenName>DR-AYESHA</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#LAB-ASSISTANT-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#LAB-ASSISTANT-1">
+        <rdf:type rdf:resource="http://id.nlm.nih.gov/mesh/D059232"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:teaches rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student1"/>
+        <schema1:address>maryam-town</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>HAROON</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#LAB-ASSISTANT-2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#LAB-ASSISTANT-2">
+        <rdf:type rdf:resource="http://id.nlm.nih.gov/mesh/D059232"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:teaches rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student2"/>
+        <schema1:address>superior-town</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>HAMZA</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#LECTURER-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#LECTURER-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Lecturer"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:teaches rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student3"/>
+        <untitled-ontology-52:supervises rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHD-STD-1"/>
+        <schema1:address>multan</schema1:address>
+        <schema1:gender>female</schema1:gender>
+        <schema1:givenName>SABAHAT</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#LECTURER-2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#LECTURER-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Lecturer"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <untitled-ontology-52:supervises rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHD-STD-2"/>
+        <schema1:address>jhang</schema1:address>
+        <schema1:gender>female</schema1:gender>
+        <schema1:givenName>MAHNOOR</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#M1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#M1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Mids"/>
+        <untitled-ontology-52:completedBy rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student2"/>
+        <schema1:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-23T00:00:00Z</schema1:endDate>
+        <schema1:givenName>spring 2025</schema1:givenName>
+        <schema1:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-28T00:00:00Z</schema1:startDate>
+        <untitled-ontology-52:examDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</untitled-ontology-52:examDuration>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MasterStudent"/>
+        <untitled-ontology-52:completesExamination rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#M1"/>
+        <untitled-ontology-52:enrolledIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#EC-1"/>
+        <untitled-ontology-52:hasAcademicRecord rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G1"/>
+        <untitled-ontology-52:hasMajorIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CB-S"/>
+        <untitled-ontology-52:receives rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NBS-1"/>
+        <schema1:address>sialkot</schema1:address>
+        <schema1:gender>female</schema1:gender>
+        <schema1:givenName>NAIMA</schema1:givenName>
+        <untitled-ontology-52:studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</untitled-ontology-52:studentId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MasterStudent"/>
+        <untitled-ontology-52:completesExamination rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#F1"/>
+        <untitled-ontology-52:enrolledIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#C2"/>
+        <untitled-ontology-52:hasAcademicRecord rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G1"/>
+        <untitled-ontology-52:hasMajorIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AI-S"/>
+        <schema1:address>bhatti-town</schema1:address>
+        <schema1:gender>female</schema1:gender>
+        <schema1:givenName>NIMRA</schema1:givenName>
+        <untitled-ontology-52:studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</untitled-ontology-52:studentId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MBS-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MBS-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MeritBaseScholarship"/>
+        <schema1:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</schema1:amount>
+        <schema1:givenName>Fall 2024</schema1:givenName>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MD-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MD-1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C39453"/>
+        <untitled-ontology-52:completedBy rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-1"/>
+        <schema1:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-10-23T00:00:00Z</schema1:endDate>
+        <schema1:givenName>Master in ML</schema1:givenName>
+        <schema1:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-23T00:00:00Z</schema1:startDate>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MT-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MT-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MasterThesis"/>
+        <untitled-ontology-52:completedBy rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-2"/>
+        <schema1:datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2027-10-23T00:00:00Z</schema1:datePublished>
+        <schema1:description>NLP Sentiment Analysis is a natural language processing technique used to automatically evaluate and classify the underlying emotional tone—such as positive, negative, or neutral—expressed within a piece of text.</schema1:description>
+        <schema1:givenName>NLP Sentiment Analysis</schema1:givenName>
+        <schema1:inLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</schema1:inLanguage>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NBS-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NBS-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NeedBaseScholarship"/>
+        <untitled-ontology-52:awardedTo rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-1"/>
+        <schema1:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</schema1:amount>
+        <schema1:givenName>Spring 2025</schema1:givenName>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PDT-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PDT-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHDThesis"/>
+        <untitled-ontology-52:completedBy rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHD-STD-2"/>
+        <schema1:datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2027-10-23T00:00:00Z</schema1:datePublished>
+        <schema1:description>Thesis_IoT_Security is a research study focused on identifying vulnerabilities, analyzing cyber threats, and proposing robust protective measures to safeguard internet-connected devices and their networks</schema1:description>
+        <schema1:givenName>Thesis IoT Security</schema1:givenName>
+        <schema1:inLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</schema1:inLanguage>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHD-STD-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHD-STD-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHDStudent"/>
+        <untitled-ontology-52:completesExamination rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#M1"/>
+        <untitled-ontology-52:enrolledIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#C1"/>
+        <untitled-ontology-52:hasAcademicRecord rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G1"/>
+        <untitled-ontology-52:hasMajorIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AI-S"/>
+        <untitled-ontology-52:receives rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MBS-1"/>
+        <schema1:address>shahpur</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>UZAIR</schema1:givenName>
+        <untitled-ontology-52:studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</untitled-ontology-52:studentId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHD-STD-2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHD-STD-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PHDStudent"/>
+        <untitled-ontology-52:completesExamination rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#F1"/>
+        <untitled-ontology-52:enrolledIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#EC-1"/>
+        <untitled-ontology-52:hasAcademicRecord rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G1"/>
+        <untitled-ontology-52:hasMajorIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DS-S"/>
+        <schema1:address>khushab</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>MANSOOR</schema1:givenName>
+        <untitled-ontology-52:studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</untitled-ontology-52:studentId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PROF-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PROF-1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C69170"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:teaches rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-1"/>
+        <untitled-ontology-52:supervises rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-1"/>
+        <schema1:address>makkah-town</schema1:address>
+        <schema1:gender>female</schema1:gender>
+        <schema1:givenName>SAMREEN</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PROF-2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#PROF-2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C69170"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:teaches rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-2"/>
+        <untitled-ontology-52:supervises rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MASTER-STD-2"/>
+        <schema1:address>defence-town</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>KALEEM</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#REG-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#REG-1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25357"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:address>47-pull</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>RAUF</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#REG-2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#REG-2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25357"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:address>sakina-town</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>SAIM</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RESEARCHER-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RESEARCHER-1">
+        <rdf:type rdf:resource="http://schema.org/Researcher"/>
+        <schema1:affiliation rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RL-1"/>
+        <untitled-ontology-52:worksOnProject rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RP-1"/>
+        <schema1:address>queen-town</schema1:address>
+        <schema1:gender>female</schema1:gender>
+        <schema1:givenName>ALISHBA</schema1:givenName>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RG-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RG-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ResearchGrant"/>
+        <untitled-ontology-52:awardedTo rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RESEARCHER-1"/>
+        <schema1:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</schema1:amount>
+        <schema1:givenName>HEC 2024</schema1:givenName>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RL-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RL-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#ResearchLab"/>
+        <schema1:name>Network Operations Lab</schema1:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RP-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RP-1">
+        <rdf:type rdf:resource="https://w3id.org/reproduceme#ResearchProject"/>
+        <schema1:funding rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RG-1"/>
+        <schema1:name>Qunatum Cryptography for Advanced  Data Secuirty</schema1:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RP-2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RP-2">
+        <rdf:type rdf:resource="https://w3id.org/reproduceme#ResearchProject"/>
+        <schema1:funding rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#RG-1"/>
+        <schema1:name>Blockchain Based Security Solutions for IOT</schema1:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1">
+        <rdf:type rdf:resource="http://schema.org/CollegeOrUniversity"/>
+        <schema1:name>UOS</schema1:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#clerk1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#clerk1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75552"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:address>satelite-town</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>DANISH</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#clerk2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#clerk2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C75552"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:address>zafar-town</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>WAQAS</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#deam-pharmacy -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#deam-pharmacy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Dean"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:address>islamabad</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>DR-ILYAS</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#dean-arts -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#dean-arts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Dean"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:address>karachi</schema1:address>
+        <schema1:gender>female</schema1:gender>
+        <schema1:givenName>DR-ASMA</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#dean-computersciences -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#dean-computersciences">
+        <rdf:type rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#Dean"/>
+        <schema1:employee rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#UNI-1"/>
+        <schema1:address>fsd</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>DR-AWAIS</schema1:givenName>
+        <untitled-ontology-52:employeeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</untitled-ontology-52:employeeId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/GSSO_010256"/>
+        <untitled-ontology-52:completesExamination rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#M1"/>
+        <untitled-ontology-52:enrolledIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#C1"/>
+        <untitled-ontology-52:hasAcademicRecord rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G2"/>
+        <untitled-ontology-52:hasMajorIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#AI-S"/>
+        <untitled-ontology-52:receives rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#MBS-1"/>
+        <schema1:address>madni-town</schema1:address>
+        <schema1:gender>female</schema1:gender>
+        <schema1:givenName>AREEBA-TAHIR</schema1:givenName>
+        <untitled-ontology-52:studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</untitled-ontology-52:studentId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student2 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/GSSO_010256"/>
+        <untitled-ontology-52:completesExamination rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#F1"/>
+        <untitled-ontology-52:enrolledIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#C2"/>
+        <untitled-ontology-52:hasAcademicRecord rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G1"/>
+        <untitled-ontology-52:hasMajorIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#DS-S"/>
+        <untitled-ontology-52:receives rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#NBS-1"/>
+        <schema1:address>johr-town</schema1:address>
+        <schema1:gender>male</schema1:gender>
+        <schema1:givenName>AWASI-FRAAZ</schema1:givenName>
+        <untitled-ontology-52:studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</untitled-ontology-52:studentId>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student3 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#student3">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/GSSO_010256"/>
+        <untitled-ontology-52:completesExamination rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#M1"/>
+        <untitled-ontology-52:enrolledIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#EC-1"/>
+        <untitled-ontology-52:hasAcademicRecord rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#G1"/>
+        <untitled-ontology-52:hasMajorIn rdf:resource="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#CB-S"/>
+        <schema1:address>49-tail</schema1:address>
+        <schema1:gender>female</schema1:gender>
+        <schema1:givenName>AYESHA-AFZAAL</schema1:givenName>
+        <untitled-ontology-52:studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</untitled-ontology-52:studentId>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/muham/ontologies/2026/3/untitled-ontology-52#gpa">
+        <rdfs:label>GPA</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
